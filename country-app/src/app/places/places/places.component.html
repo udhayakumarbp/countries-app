@@ -1,0 +1,18 @@
+<div class="places-container">
+    <div>
+        <input [formControl]="searchCtrl" type="search">
+    </div>
+
+    <!-- Suggestions -->
+
+    <div class="place-suggestions">
+        <div *ngFor="let suggestion of suggestions">
+            <p style="margin: 0;">
+                <strong>{{suggestion.structured_formatting.main_text}}</strong>
+            </p>
+            <p style="margin: 0">
+                <small style="color: gray;">{{suggestion.structured_formatting.secondary_text}}</small>
+            </p>
+        </div>
+    </div>
+</div>
